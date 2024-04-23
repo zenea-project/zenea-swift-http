@@ -9,7 +9,7 @@ let package = Package(
         .macOS("13.3")
     ],
     products: [
-        .library(name: "zenea-swift-http", targets: ["ZeneaHTTP"])
+        .library(name: "zenea-http", targets: ["ZeneaHTTP"])
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.92.0"),
