@@ -12,9 +12,9 @@ let package = Package(
         .library(name: "zenea-swift-http", targets: ["ZeneaHTTP"])
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.92.6"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.92.0"),
         .package(url: "https://github.com/apple/swift-crypto.git", from: "3.3.0"),
-        .package(url: "https://github.com/zenea-project/zenea-swift.git", from: "2.0.0")
+        .package(url: "https://github.com/zenea-project/zenea-swift.git", from: "3.0.0")
     ],
     targets: [
         .target(

@@ -2,8 +2,7 @@ import Foundation
 import Zenea
 
 extension ZeneaHTTPClient {
-    public func putBlock<Bytes>(content: Bytes) async -> Result<Block, Block.PutError> where Bytes: AsyncSequence, Bytes.Element == Data {
-        guard let content = try? await content.read() else { return .failure(.unable) }
+    public func putBlock(content: Data) async -> Result<Block, Block.PutError> {
         guard content.count <= Block.maxBytes else { return .failure(.overflow) }
         
         let block = Block(content: content)
